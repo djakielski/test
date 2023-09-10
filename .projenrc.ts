@@ -5,7 +5,11 @@
 
 import { cdktf } from "projen";
 import { Stability } from "projen/lib/cdk";
-import {NodePackageManager, NpmAccess, UpgradeDependenciesSchedule} from "projen/lib/javascript";
+import {
+  NodePackageManager,
+  NpmAccess,
+  UpgradeDependenciesSchedule,
+} from "projen/lib/javascript";
 import { AutoApprove } from "./projenrc/auto-approve";
 import { Automerge } from "./projenrc/automerge";
 import { CustomizedLicense } from "./projenrc/customized-license";
@@ -14,7 +18,7 @@ import { UpgradeNode } from "./projenrc/upgrade-node";
 
 // `name` is expected to be in the format "cdktf-project-name" or "@cdktf/project-name"
 const name = "cdktf-nodejs-function";
-const shortName = name.replace(/^@?cdktf[-\/]/g, "");
+const shortName = name.replace(/^@?cdktf[-/]/g, "");
 
 const githubActionPinnedVersions = {
   "actions/checkout": "c85c95e3d7251135ab7dc9ce3241c5835cc595a9", // v3.5.3
@@ -39,7 +43,6 @@ const project = new cdktf.ConstructLibraryCdktf({
   prettier: true,
   licensed: false,
   pullRequestTemplate: false,
-  mergify: false,
   depsUpgradeOptions: {
     workflowOptions: {
       labels: ["auto-approve", "automerge", "dependencies"],
@@ -67,7 +70,7 @@ project.addPeerDeps(
 );
 project.addDevDeps(
   "change-case",
-  "node-fetch@~2" // @TODO this can be removed once we upgrade to Node 18 and use native fetch
+  "testcontainers"
 );
 
 new CustomizedLicense(project);

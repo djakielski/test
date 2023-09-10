@@ -42,30 +42,30 @@ Once the repository is created, add the following [GitHub Actions secrets](https
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
 
-### NoopStack <a name="NoopStack" id="@cdktf/construct-projen-template.NoopStack"></a>
+### NoopStack <a name="NoopStack" id="cdktf-nodejs-function.NoopStack"></a>
 
-#### Initializers <a name="Initializers" id="@cdktf/construct-projen-template.NoopStack.Initializer"></a>
+#### Initializers <a name="Initializers" id="cdktf-nodejs-function.NoopStack.Initializer"></a>
 
 ```typescript
-import { NoopStack } from '@cdktf/construct-projen-template'
+import { NoopStack } from 'cdktf-nodejs-function'
 
 new NoopStack(scope: Construct, name: string)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/construct-projen-template.NoopStack.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
-| <code><a href="#@cdktf/construct-projen-template.NoopStack.Initializer.parameter.name">name</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdktf-nodejs-function.NoopStack.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#cdktf-nodejs-function.NoopStack.Initializer.parameter.name">name</a></code> | <code>string</code> | *No description.* |
 
 ---
 
-##### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/construct-projen-template.NoopStack.Initializer.parameter.scope"></a>
+##### `scope`<sup>Required</sup> <a name="scope" id="cdktf-nodejs-function.NoopStack.Initializer.parameter.scope"></a>
 
 - *Type:* constructs.Construct
 
 ---
 
-##### `name`<sup>Required</sup> <a name="name" id="@cdktf/construct-projen-template.NoopStack.Initializer.parameter.name"></a>
+##### `name`<sup>Required</sup> <a name="name" id="cdktf-nodejs-function.NoopStack.Initializer.parameter.name"></a>
 
 - *Type:* string
 
@@ -75,22 +75,22 @@ new NoopStack(scope: Construct, name: string)
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdktf/construct-projen-template.NoopStack.toString">toString</a></code> | Returns a string representation of this construct. |
-| <code><a href="#@cdktf/construct-projen-template.NoopStack.addDependency">addDependency</a></code> | *No description.* |
-| <code><a href="#@cdktf/construct-projen-template.NoopStack.addOverride">addOverride</a></code> | *No description.* |
-| <code><a href="#@cdktf/construct-projen-template.NoopStack.allProviders">allProviders</a></code> | *No description.* |
-| <code><a href="#@cdktf/construct-projen-template.NoopStack.dependsOn">dependsOn</a></code> | *No description.* |
-| <code><a href="#@cdktf/construct-projen-template.NoopStack.ensureBackendExists">ensureBackendExists</a></code> | *No description.* |
-| <code><a href="#@cdktf/construct-projen-template.NoopStack.getLogicalId">getLogicalId</a></code> | *No description.* |
-| <code><a href="#@cdktf/construct-projen-template.NoopStack.prepareStack">prepareStack</a></code> | *No description.* |
-| <code><a href="#@cdktf/construct-projen-template.NoopStack.registerIncomingCrossStackReference">registerIncomingCrossStackReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/construct-projen-template.NoopStack.registerOutgoingCrossStackReference">registerOutgoingCrossStackReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/construct-projen-template.NoopStack.runAllValidations">runAllValidations</a></code> | Run all validations on the stack. |
-| <code><a href="#@cdktf/construct-projen-template.NoopStack.toTerraform">toTerraform</a></code> | *No description.* |
+| <code><a href="#cdktf-nodejs-function.NoopStack.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#cdktf-nodejs-function.NoopStack.addDependency">addDependency</a></code> | *No description.* |
+| <code><a href="#cdktf-nodejs-function.NoopStack.addOverride">addOverride</a></code> | *No description.* |
+| <code><a href="#cdktf-nodejs-function.NoopStack.allProviders">allProviders</a></code> | *No description.* |
+| <code><a href="#cdktf-nodejs-function.NoopStack.dependsOn">dependsOn</a></code> | *No description.* |
+| <code><a href="#cdktf-nodejs-function.NoopStack.ensureBackendExists">ensureBackendExists</a></code> | *No description.* |
+| <code><a href="#cdktf-nodejs-function.NoopStack.getLogicalId">getLogicalId</a></code> | *No description.* |
+| <code><a href="#cdktf-nodejs-function.NoopStack.prepareStack">prepareStack</a></code> | *No description.* |
+| <code><a href="#cdktf-nodejs-function.NoopStack.registerIncomingCrossStackReference">registerIncomingCrossStackReference</a></code> | *No description.* |
+| <code><a href="#cdktf-nodejs-function.NoopStack.registerOutgoingCrossStackReference">registerOutgoingCrossStackReference</a></code> | *No description.* |
+| <code><a href="#cdktf-nodejs-function.NoopStack.runAllValidations">runAllValidations</a></code> | Run all validations on the stack. |
+| <code><a href="#cdktf-nodejs-function.NoopStack.toTerraform">toTerraform</a></code> | *No description.* |
 
 ---
 
-##### `toString` <a name="toString" id="@cdktf/construct-projen-template.NoopStack.toString"></a>
+##### `toString` <a name="toString" id="cdktf-nodejs-function.NoopStack.toString"></a>
 
 ```typescript
 public toString(): string
@@ -98,103 +98,103 @@ public toString(): string
 
 Returns a string representation of this construct.
 
-##### `addDependency` <a name="addDependency" id="@cdktf/construct-projen-template.NoopStack.addDependency"></a>
+##### `addDependency` <a name="addDependency" id="cdktf-nodejs-function.NoopStack.addDependency"></a>
 
 ```typescript
 public addDependency(dependency: TerraformStack): void
 ```
 
-###### `dependency`<sup>Required</sup> <a name="dependency" id="@cdktf/construct-projen-template.NoopStack.addDependency.parameter.dependency"></a>
+###### `dependency`<sup>Required</sup> <a name="dependency" id="cdktf-nodejs-function.NoopStack.addDependency.parameter.dependency"></a>
 
 - *Type:* cdktf.TerraformStack
 
 ---
 
-##### `addOverride` <a name="addOverride" id="@cdktf/construct-projen-template.NoopStack.addOverride"></a>
+##### `addOverride` <a name="addOverride" id="cdktf-nodejs-function.NoopStack.addOverride"></a>
 
 ```typescript
 public addOverride(path: string, value: any): void
 ```
 
-###### `path`<sup>Required</sup> <a name="path" id="@cdktf/construct-projen-template.NoopStack.addOverride.parameter.path"></a>
+###### `path`<sup>Required</sup> <a name="path" id="cdktf-nodejs-function.NoopStack.addOverride.parameter.path"></a>
 
 - *Type:* string
 
 ---
 
-###### `value`<sup>Required</sup> <a name="value" id="@cdktf/construct-projen-template.NoopStack.addOverride.parameter.value"></a>
+###### `value`<sup>Required</sup> <a name="value" id="cdktf-nodejs-function.NoopStack.addOverride.parameter.value"></a>
 
 - *Type:* any
 
 ---
 
-##### `allProviders` <a name="allProviders" id="@cdktf/construct-projen-template.NoopStack.allProviders"></a>
+##### `allProviders` <a name="allProviders" id="cdktf-nodejs-function.NoopStack.allProviders"></a>
 
 ```typescript
 public allProviders(): TerraformProvider[]
 ```
 
-##### `dependsOn` <a name="dependsOn" id="@cdktf/construct-projen-template.NoopStack.dependsOn"></a>
+##### `dependsOn` <a name="dependsOn" id="cdktf-nodejs-function.NoopStack.dependsOn"></a>
 
 ```typescript
 public dependsOn(stack: TerraformStack): boolean
 ```
 
-###### `stack`<sup>Required</sup> <a name="stack" id="@cdktf/construct-projen-template.NoopStack.dependsOn.parameter.stack"></a>
+###### `stack`<sup>Required</sup> <a name="stack" id="cdktf-nodejs-function.NoopStack.dependsOn.parameter.stack"></a>
 
 - *Type:* cdktf.TerraformStack
 
 ---
 
-##### `ensureBackendExists` <a name="ensureBackendExists" id="@cdktf/construct-projen-template.NoopStack.ensureBackendExists"></a>
+##### `ensureBackendExists` <a name="ensureBackendExists" id="cdktf-nodejs-function.NoopStack.ensureBackendExists"></a>
 
 ```typescript
 public ensureBackendExists(): TerraformBackend
 ```
 
-##### `getLogicalId` <a name="getLogicalId" id="@cdktf/construct-projen-template.NoopStack.getLogicalId"></a>
+##### `getLogicalId` <a name="getLogicalId" id="cdktf-nodejs-function.NoopStack.getLogicalId"></a>
 
 ```typescript
 public getLogicalId(tfElement: Node | TerraformElement): string
 ```
 
-###### `tfElement`<sup>Required</sup> <a name="tfElement" id="@cdktf/construct-projen-template.NoopStack.getLogicalId.parameter.tfElement"></a>
+###### `tfElement`<sup>Required</sup> <a name="tfElement" id="cdktf-nodejs-function.NoopStack.getLogicalId.parameter.tfElement"></a>
 
 - *Type:* constructs.Node | cdktf.TerraformElement
 
 ---
 
-##### `prepareStack` <a name="prepareStack" id="@cdktf/construct-projen-template.NoopStack.prepareStack"></a>
+##### `prepareStack` <a name="prepareStack" id="cdktf-nodejs-function.NoopStack.prepareStack"></a>
 
 ```typescript
 public prepareStack(): void
 ```
 
-##### `registerIncomingCrossStackReference` <a name="registerIncomingCrossStackReference" id="@cdktf/construct-projen-template.NoopStack.registerIncomingCrossStackReference"></a>
+##### `registerIncomingCrossStackReference` <a name="registerIncomingCrossStackReference" id="cdktf-nodejs-function.NoopStack.registerIncomingCrossStackReference"></a>
 
 ```typescript
 public registerIncomingCrossStackReference(fromStack: TerraformStack): TerraformRemoteState
 ```
 
-###### `fromStack`<sup>Required</sup> <a name="fromStack" id="@cdktf/construct-projen-template.NoopStack.registerIncomingCrossStackReference.parameter.fromStack"></a>
+###### `fromStack`<sup>Required</sup> <a name="fromStack" id="cdktf-nodejs-function.NoopStack.registerIncomingCrossStackReference.parameter.fromStack"></a>
 
 - *Type:* cdktf.TerraformStack
 
 ---
 
-##### `registerOutgoingCrossStackReference` <a name="registerOutgoingCrossStackReference" id="@cdktf/construct-projen-template.NoopStack.registerOutgoingCrossStackReference"></a>
+##### `registerOutgoingCrossStackReference` <a name="registerOutgoingCrossStackReference" id="cdktf-nodejs-function.NoopStack.registerOutgoingCrossStackReference"></a>
 
 ```typescript
 public registerOutgoingCrossStackReference(identifier: string): TerraformOutput
 ```
 
-###### `identifier`<sup>Required</sup> <a name="identifier" id="@cdktf/construct-projen-template.NoopStack.registerOutgoingCrossStackReference.parameter.identifier"></a>
+###### `identifier`<sup>Required</sup> <a name="identifier" id="cdktf-nodejs-function.NoopStack.registerOutgoingCrossStackReference.parameter.identifier"></a>
 
 - *Type:* string
 
 ---
 
-##### `runAllValidations` <a name="runAllValidations" id="@cdktf/construct-projen-template.NoopStack.runAllValidations"></a>
+##### `runAllValidations` <a name="runAllValidations" id="cdktf-nodejs-function.NoopStack.runAllValidations"></a>
 
 ```typescript
 public runAllValidations(): void
@@ -202,7 +202,7 @@ public runAllValidations(): void
 
 Run all validations on the stack.
 
-##### `toTerraform` <a name="toTerraform" id="@cdktf/construct-projen-template.NoopStack.toTerraform"></a>
+##### `toTerraform` <a name="toTerraform" id="cdktf-nodejs-function.NoopStack.toTerraform"></a>
 
 ```typescript
 public toTerraform(): any
@@ -212,23 +212,23 @@ public toTerraform(): any
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#@cdktf/construct-projen-template.NoopStack.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
-| <code><a href="#@cdktf/construct-projen-template.NoopStack.isStack">isStack</a></code> | *No description.* |
-| <code><a href="#@cdktf/construct-projen-template.NoopStack.of">of</a></code> | *No description.* |
+| <code><a href="#cdktf-nodejs-function.NoopStack.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#cdktf-nodejs-function.NoopStack.isStack">isStack</a></code> | *No description.* |
+| <code><a href="#cdktf-nodejs-function.NoopStack.of">of</a></code> | *No description.* |
 
 ---
 
-##### ~~`isConstruct`~~ <a name="isConstruct" id="@cdktf/construct-projen-template.NoopStack.isConstruct"></a>
+##### ~~`isConstruct`~~ <a name="isConstruct" id="cdktf-nodejs-function.NoopStack.isConstruct"></a>
 
 ```typescript
-import { NoopStack } from '@cdktf/construct-projen-template'
+import { NoopStack } from 'cdktf-nodejs-function'
 
 NoopStack.isConstruct(x: any)
 ```
 
 Checks if `x` is a construct.
 
-###### `x`<sup>Required</sup> <a name="x" id="@cdktf/construct-projen-template.NoopStack.isConstruct.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="cdktf-nodejs-function.NoopStack.isConstruct.parameter.x"></a>
 
 - *Type:* any
 
@@ -236,29 +236,29 @@ Any object.
 
 ---
 
-##### `isStack` <a name="isStack" id="@cdktf/construct-projen-template.NoopStack.isStack"></a>
+##### `isStack` <a name="isStack" id="cdktf-nodejs-function.NoopStack.isStack"></a>
 
 ```typescript
-import { NoopStack } from '@cdktf/construct-projen-template'
+import { NoopStack } from 'cdktf-nodejs-function'
 
 NoopStack.isStack(x: any)
 ```
 
-###### `x`<sup>Required</sup> <a name="x" id="@cdktf/construct-projen-template.NoopStack.isStack.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="cdktf-nodejs-function.NoopStack.isStack.parameter.x"></a>
 
 - *Type:* any
 
 ---
 
-##### `of` <a name="of" id="@cdktf/construct-projen-template.NoopStack.of"></a>
+##### `of` <a name="of" id="cdktf-nodejs-function.NoopStack.of"></a>
 
 ```typescript
-import { NoopStack } from '@cdktf/construct-projen-template'
+import { NoopStack } from 'cdktf-nodejs-function'
 
 NoopStack.of(construct: IConstruct)
 ```
 
-###### `construct`<sup>Required</sup> <a name="construct" id="@cdktf/construct-projen-template.NoopStack.of.parameter.construct"></a>
+###### `construct`<sup>Required</sup> <a name="construct" id="cdktf-nodejs-function.NoopStack.of.parameter.construct"></a>
 
 - *Type:* constructs.IConstruct
 
@@ -268,13 +268,13 @@ NoopStack.of(construct: IConstruct)
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/construct-projen-template.NoopStack.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#@cdktf/construct-projen-template.NoopStack.property.dependencies">dependencies</a></code> | <code>cdktf.TerraformStack[]</code> | *No description.* |
-| <code><a href="#@cdktf/construct-projen-template.NoopStack.property.synthesizer">synthesizer</a></code> | <code>cdktf.IStackSynthesizer</code> | *No description.* |
+| <code><a href="#cdktf-nodejs-function.NoopStack.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#cdktf-nodejs-function.NoopStack.property.dependencies">dependencies</a></code> | <code>cdktf.TerraformStack[]</code> | *No description.* |
+| <code><a href="#cdktf-nodejs-function.NoopStack.property.synthesizer">synthesizer</a></code> | <code>cdktf.IStackSynthesizer</code> | *No description.* |
 
 ---
 
-##### `node`<sup>Required</sup> <a name="node" id="@cdktf/construct-projen-template.NoopStack.property.node"></a>
+##### `node`<sup>Required</sup> <a name="node" id="cdktf-nodejs-function.NoopStack.property.node"></a>
 
 ```typescript
 public readonly node: Node;
@@ -286,7 +286,7 @@ The tree node.
 
 ---
 
-##### `dependencies`<sup>Required</sup> <a name="dependencies" id="@cdktf/construct-projen-template.NoopStack.property.dependencies"></a>
+##### `dependencies`<sup>Required</sup> <a name="dependencies" id="cdktf-nodejs-function.NoopStack.property.dependencies"></a>
 
 ```typescript
 public readonly dependencies: TerraformStack[];
@@ -296,7 +296,7 @@ public readonly dependencies: TerraformStack[];
 
 ---
 
-##### `synthesizer`<sup>Required</sup> <a name="synthesizer" id="@cdktf/construct-projen-template.NoopStack.property.synthesizer"></a>
+##### `synthesizer`<sup>Required</sup> <a name="synthesizer" id="cdktf-nodejs-function.NoopStack.property.synthesizer"></a>
 
 ```typescript
 public readonly synthesizer: IStackSynthesizer;

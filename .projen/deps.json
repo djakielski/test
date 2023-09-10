@@ -95,11 +95,6 @@
       "type": "build"
     },
     {
-      "name": "node-fetch",
-      "version": "~2",
-      "type": "build"
-    },
-    {
       "name": "npm-check-updates",
       "version": "^16",
       "type": "build"
@@ -115,6 +110,10 @@
     {
       "name": "standard-version",
       "version": "^9",
+      "type": "build"
+    },
+    {
+      "name": "testcontainers",
       "type": "build"
     },
     {
