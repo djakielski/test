@@ -3,10 +3,9 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// import { snakeCase, pascalCase } from "change-case";
 import { cdktf } from "projen";
 import { Stability } from "projen/lib/cdk";
-import { NpmAccess, UpgradeDependenciesSchedule } from "projen/lib/javascript";
+import {NodePackageManager, NpmAccess, UpgradeDependenciesSchedule} from "projen/lib/javascript";
 import { AutoApprove } from "./projenrc/auto-approve";
 import { Automerge } from "./projenrc/automerge";
 import { CustomizedLicense } from "./projenrc/customized-license";
@@ -14,7 +13,7 @@ import { UpgradeCDKTF } from "./projenrc/upgrade-cdktf";
 import { UpgradeNode } from "./projenrc/upgrade-node";
 
 // `name` is expected to be in the format "cdktf-project-name" or "@cdktf/project-name"
-const name = "@cdktf/construct-projen-template";
+const name = "cdktf-nodejs-function";
 const shortName = name.replace(/^@?cdktf[-\/]/g, "");
 
 const githubActionPinnedVersions = {
@@ -32,9 +31,9 @@ const project = new cdktf.ConstructLibraryCdktf({
   name,
   description: "A projen template for CDKTF constructs authored by HashiCorp",
   repositoryUrl: `https://github.com/cdktf/${shortName}.git`,
-  author: "HashiCorp",
-  authorAddress: "https://hashicorp.com",
-  authorOrganization: true,
+  author: "Dominik Jakielski",
+  authorAddress: "git@jakielski.de",
+  authorOrganization: false,
   defaultReleaseBranch: "main",
   projenrcTs: true,
   prettier: true,
@@ -51,30 +50,11 @@ const project = new cdktf.ConstructLibraryCdktf({
     name: "team-tf-cdk",
     email: "github-team-tf-cdk@hashicorp.com",
   },
+  packageManager: NodePackageManager.PNPM,
+  keywords: ["ckd", "aws", "lambda", "nodejs", "constructs"],
   stability: Stability.EXPERIMENTAL,
-  npmAccess: NpmAccess.RESTRICTED, // change this to PUBLIC to publish to NPM
-  releaseToNpm: false, // you probably want to remove this line, assuming you want to publish to NPM
-  // Uncomment the following depending on which package manager(s) you'd like to publish to
-  // publishToPypi: {
-  //   distName: name.replace(/^@cdktf\//, "cdktf-"),
-  //   module: snakeCase(name.replace(/^@cdktf\//, "cdktf-")),
-  // },
-  // publishToNuget: {
-  //   dotNetNamespace: `HashiCorp.Cdktf.${pascalCase(shortName)}`,
-  //   packageId: `HashiCorp.Cdktf.${pascalCase(shortName)}`,
-  // },
-  // publishToMaven: {
-  //   javaPackage: `com.hashicorp.cdktf.${snakeCase(shortName)}`,
-  //   mavenGroupId: "com.hashicorp",
-  //   mavenArtifactId: name.replace(/^@cdktf\//, "cdktf-"),
-  //   mavenEndpoint: "https://hashicorp.oss.sonatype.org",
-  // },
-  // publishToGo: {
-  //   gitUserEmail: "github-team-tf-cdk@hashicorp.com",
-  //   gitUserName: "CDK for Terraform Team",
-  //   moduleName: `github.com/cdktf/${shortName}-go`,
-  //   packageName: shortName.replace(/-/g, ""),
-  // },
+  npmAccess: NpmAccess.PUBLIC,
+  releaseToNpm: true, // you probably want to remove this line, assuming you want to publish to NPM
   cdktfVersion: "^0.18.0",
   jsiiVersion: "^5.1.0",
   minNodeVersion: "18.12.0",

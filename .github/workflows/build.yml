@@ -19,12 +19,16 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.ref }}
           repository: ${{ github.event.pull_request.head.repo.full_name }}
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2.2.4
+        with:
+          version: "7"
       - name: Setup Node.js
         uses: actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c
         with:
           node-version: 18.12.0
       - name: Install dependencies
-        run: yarn install --check-files
+        run: pnpm i --no-frozen-lockfile
       - name: build
         run: npx projen build
       - name: Setup Copywrite tool
@@ -48,6 +52,14 @@ jobs:
           echo "::error::Files were changed during build (see build log). If this was triggered from a fork, you will need to update your branch."
           cat .repo.patch
           exit 1
+      - name: Backup artifact permissions
+        run: cd dist && getfacl -R . > permissions-backup.acl
+        continue-on-error: true
+      - name: Upload artifact
+        uses: actions/upload-artifact@0b7f8abb1508181956e8e162db84b466c27e18ce
+        with:
+          name: build-artifact
+          path: dist
   self-mutation:
     needs: build
     runs-on: ubuntu-latest
@@ -79,3 +91,32 @@ jobs:
           git add .
           git commit -s -m "chore: self mutation"
           git push origin HEAD:$PULL_REQUEST_REF
+  package-js:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions: {}
+    if: "! needs.build.outputs.self_mutation_happened"
+    steps:
+      - uses: actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c
+        with:
+          node-version: 18.12.0
+      - name: Download build artifacts
+        uses: actions/download-artifact@9bc31d5ccc31df68ecc42ccf4149144866c47d8a
+        with:
+          name: build-artifact
+          path: dist
+      - name: Restore build artifact permissions
+        run: cd dist && setfacl --restore=permissions-backup.acl
+        continue-on-error: true
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2.2.4
+        with:
+          version: "7"
+      - name: Prepare Repository
+        run: mv dist .repo
+      - name: Install Dependencies
+        run: cd .repo && pnpm i --frozen-lockfile
+      - name: Create js artifact
+        run: cd .repo && npx projen package:js
+      - name: Collect js Artifact
+        run: mv .repo/dist dist

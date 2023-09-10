@@ -57,3 +57,4 @@ tsconfig.json
 !/.github/workflows/upgrade-node.yml
 .yalc
 yalc.lock
+.idea
